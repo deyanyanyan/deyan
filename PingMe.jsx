@@ -3,16 +3,15 @@ const { useEffect: useEffectPing, useState: useStatePing } = React;
 
 function PingMe() {
   const lines = [
-    { k: '> initialising contact protocol...', cls: 'dim' },
-    { k: '> handshake complete.',              cls: 'dim' },
-    { k: '> email:    ',    v: '[YOUR EMAIL]',    href: 'mailto:[YOUR EMAIL]' },
-    { k: '> linkedin: ',    v: '[YOUR LINKEDIN]', href: '#' },
-    { k: '> github:   ',    v: '[YOUR GITHUB]',   href: '#' },
-    { k: '> itch.io:  ',    v: '[YOUR ITCHIO]',   href: '#' },
-    { k: '> awaiting message_', cls: 'dim' },
+    { k: '> scanning visitor...',                 cls: 'dim' },
+    { k: '> human detected.',                     cls: 'dim' },
+    { k: '> wow. you actually scrolled this far.' },
+    { k: '> initiating reward protocol...',       cls: 'dim' },
+    { k: '> reward: a picture of my cat.'         },
   ];
 
   const [shown, setShown] = useStatePing(0);
+
   useEffectPing(function() {
     var t = setInterval(function() {
       setShown(function(n) { return n >= lines.length ? n : n + 1; });
@@ -21,10 +20,10 @@ function PingMe() {
   }, []);
 
   const icons = [
-    { name: 'Email',    icon: 'mail',      href: 'mailto:[YOUR EMAIL]' },
-    { name: 'LinkedIn', icon: 'briefcase', href: '#' },
-    { name: 'GitHub',   icon: 'code-2',    href: 'https://github.com/deyanyanyan' },
-    { name: 'Itch.io',  icon: 'gamepad-2', href: '#' },
+    { name: 'Email',              icon: 'mail',      href: 'mailto:deyanlodeen@gmail.com' },
+    { name: 'LinkedIn',           icon: 'briefcase', href: 'https://www.linkedin.com/in/deyan-lo-b73459188/' },
+    { name: 'CREATIVE PORTFOLIO', icon: 'gamepad-2', href: 'https://mr-deyan-lo.wixsite.com/deyan' },
+    { name: 'RESUME',             icon: 'download',  href: 'https://drive.google.com/file/d/1IsdouPwQGiD81SIAFFP-dWBp2Hf1mR2W/view?usp=sharing' },
   ];
 
   return (
@@ -53,6 +52,18 @@ function PingMe() {
             })}
             {shown >= lines.length && <span className="caret" aria-hidden="true"></span>}
           </pre>
+          {shown >= lines.length && (
+            <div className="dy-terminal__footer">
+              <a
+                className="dy-human-btn mono"
+                href="https://drive.google.com/file/d/1ea8pHXq3R3JQqyG-H035AVL3Cmh3jfMk/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {'> [ claim reward ]'}
+              </a>
+            </div>
+          )}
         </div>
 
         <div className="dy-ping__icons">

@@ -104,9 +104,9 @@ function Hero({ onJump }) {
         <div className="dy-hero__ctas">
           <button className="btn" onClick={() => onJump('builds')}>
             <i data-lucide="terminal" className="dy-icon"></i>
-            VIEW MY WORK
+            VIEW PROJECTS
           </button>
-          <a className="btn btn--ghost" href="resume.pdf" download>
+          <a className="btn btn--ghost" href="https://drive.google.com/file/d/1IsdouPwQGiD81SIAFFP-dWBp2Hf1mR2W/view?usp=sharing" target="_blank" rel="noreferrer">
             <i data-lucide="download" className="dy-icon"></i>
             DOWNLOAD RESUME
           </a>

@@ -20,7 +20,7 @@ function Nav({ active, onJump }) {
         <span className="dy-nav__bracket">[</span>
         <span className="dy-nav__brand-letter">D</span>
         <span className="dy-nav__bracket">]</span>
-        <span className="dy-nav__brand-name">deyan</span>
+        <span className="dy-nav__brand-name">deyan lo</span>
         <span className="caret" aria-hidden="true"></span>
       </a>
 
@@ -38,9 +38,13 @@ function Nav({ active, onJump }) {
         ))}
       </ul>
 
-      <a className="dy-nav__cta" href="resume.pdf" aria-label="Download resume">
-        <i data-lucide="download" className="dy-icon"></i>
-        <span>RESUME.pdf</span>
+      <a
+        className="dy-nav__cta"
+        href="#ping"
+        onClick={(e) => { e.preventDefault(); onJump('ping'); }}
+        aria-label="Contact me"
+      >
+        <span>CONTACT</span>
       </a>
     </nav>
   );
