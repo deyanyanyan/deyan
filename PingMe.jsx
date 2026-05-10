@@ -89,7 +89,7 @@ function Footer() {
         <span>END OF FILE</span>
       </div>
       <div className="dy-footer__hash">
-        © 2026 Deyan · build a4f1c2 · pressing ESC won't help
+        © 2026 Deyan
       </div>
     </footer>
   );
