@@ -246,7 +246,7 @@ function Design() {
           {/* ---------- CASE 04 — Motion graphic 2 ---------- */}
           <CaseStudy
             index={4}
-            ctx="MOTION / DOCUMENTARY"
+            ctx="MOTION / Group N Ship"
             title="Group N Ship Singapore"
             role="Director / Motion Graphic Designer"
             tools={['Premiere Pro', 'After Effects']}
